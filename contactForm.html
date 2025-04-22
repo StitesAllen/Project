@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Personal Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1 id="mainhead">Contact Me</h1>
+            <div class="flexbox-container">
+                <a href="index.html" class="box-link">
+                    <div id="box1" class="box-common">About Me</div>
+                </a>
+                <a href="project.html" class="box-link">
+                    <div id="box2" class="box-common">Projects</div>
+                </a>
+                <a href="graphic.html" class="box-link">
+                    <div id="box3" class="box-common">Graphic Design</div>
+                </a>
+                <a href="resume.html" class="box-link">
+                    <div id="box4" class="box-common">Resume</div>
+                </a>
+                <a href="contactForm.html" class="box-link">
+                    <div id="box5" class="box-common">Contact Me</div>
+                </a>
+            </div>
+        </header>
+
+        <article>
+            <div class="sectionBox">
+                <h2>Contact information</h2>
+                <div class="contactInfo">
+                    <p><b>Phone:</b> (502)-938-6940</p>
+                    <p><b>Email:</b> sstitesallen@gmail.com <b>or</b> sallen29@uvm.edu</p>
+                    <p><b>Address:</b> 50 Lafountain St. Burlington, VT, 05401</p>
+                    <p>Feel free to reach out to me on <a href="https://www.linkedin.com/in/samuel-allen-a1b105265/">LinkedIn</a> as well</p>
+                </div>
+            </div>
+            <form action="mailto:sstitesallen@gmail.com" method="post" enctype="text/plain" onsubmit="return validateForm()">
+                <label for="name">Name: </label><br>
+                <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" title="Name should only contain letters and spaces" placeholder="Prefered Name" required/><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Valid Email"><br>
+
+                <label for="phoneNumber">Phone Number:</label><br>
+                <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" title="Enter a 10-digit phone number" placeholder="Just Numbers"><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="40" placeholder="Your message" required></textarea><br>
+
+                <button type="submit">Submit</button>   
+            </form>
+        </article>
+        <script src="script.js"></script>
+    </body>
+</html>
