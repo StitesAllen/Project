@@ -3,102 +3,169 @@
         <title>Resume</title>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <body>
+
+    <body id="resume-page">
+
         <header>
             <h1 id="mainhead">Resume</h1>
             <div class="flexbox-container">
-                <a href="index.html" class="box-link">
-                    <div id="box1" class="box-common">About Me</div>
-                </a>
-                <a href="project.html" class="box-link">
-                    <div id="box2" class="box-common">Projects</div>
-                </a>
-                <a href="graphic.html" class="box-link">
-                    <div id="box3" class="box-common">Graphic Design</div>
-                </a>
-                <a href="resume.html" class="box-link">
-                    <div id="box4" class="box-common">Resume</div>
-                </a>
-                <a href="contactForm.html" class="box-link">
-                    <div id="box5" class="box-common">Contact Me</div>
-                </a>
+                <a href="index.html" class="box-link"><div class="box-common">About Me</div></a>
+                <a href="project.html" class="box-link"><div class="box-common">Projects</div></a>
+                <a href="graphic.html" class="box-link"><div class="box-common">Graphic Design</div></a>
+                <a href="resume.html" class="box-link"><div class="box-common">Resume</div></a>
+                <a href="contactForm.html" class="box-link"><div class="box-common">Contact Me</div></a>
             </div>
         </header>
-    
-        <article class="sectionBox">
-            <div class="flexbox-resume">
-                <div class="main">
-                    <h2 id="reshead">Education</h2>
-                    <div class="flexbox-container nowrap">
-                        <h3 id="ressub">University of Vermont</h3>
-                        <h4>Burlington, Vermont</h4>
-                    </div>
-                    <h5 id="resloc">College of Engineering and Mathematical Sciences</h5>
-                    <ul id="resumelist">
-                        <li>Bachelors of Engineering</li>
-                        <li>Minor in Mathematics</li>
-                        <li>Presidential Scholarship</li>
-                    </ul>
-                    <h2 id="reshead">Work Experience</h2>
-                    <div class="flexbox-container nowrap">
-                        <h3 id="ressub">McGillicuddy's Alehouse</h3>
-                        <h4>Williston, Vermont</h4>
-                    </div>
-                    <h5 id="resloc">Line Cook May 2023 - Dec 2023</h5>
-                    <ul id="resumelist">
-                        <li>Worked in fast paced environment</li>
-                        <li>Completed extra objectives to alleviate others responsibilities</li>
-                        <li>Managed multiple different task simultaneously</li>
-                    </ul>
-                    <div class="flexbox-container nowrap">
-                        <h3 id="ressub">Cherokee Golf Course</h3>
-                        <h4>Louisvillle, Kentucky</h4>
-                    </div>
-                    <h5 id="resloc">Clubhouse Operator Jul 2023 - Aug 2023</h5>
-                    <ul id="resumelist">
-                        <li>Independtly operated all clubhouse operations</li>
-                        <li>Handled communicating with clientle</li>
-                        <li>Responsible for end of day financial calculations</li>
-                    </ul>
+
+        <article class="sectionBox resume-wrapper">
+
+            <!-- ⭐ NEW GRID WRAPPER -->
+            <div class="resume-container">
+
+                <!-- LEFT COLUMN -->
+                <div class="resume-column">
+                    <h1 class="resume-name">S. Stites Allen</h1>
+
+                    <section class="resume-section">
+                        <h2 class="resume-title">Education</h2>
+
+                        <div class="resume-row">
+                            <h3 class="resume-subtitle">University of Vermont</h3>
+                            <h4 class="resume-location">Burlington, Vermont</h4>
+                        </div>
+
+                        <p class="resume-detail">College of Engineering and Mathematical Sciences</p>
+
+                        <ul class="resume-list">
+                            <li>Bachelors of Science in Engineering | GPA: 3.71</li>
+                            <li>Minor in Mathematics | Minor GPA: 3.70</li>
+                            <li>Presidential Scholarship | Dean's List Recipient</li>
+                        </ul>
+                    </section>
+
+                    <section class="resume-section">
+                        <h2 class="resume-title">Relevant Projects</h2>
+
+                        <div class="resume-row">
+                            <h3 class="resume-subtitle">CIM-LRD Competition: Boston Blue Line Extension</h3>
+                        </div>
+
+                        <ul class="resume-list">
+                            <li>Honorable mention and $10,000 prize in CIM-LRD Design Competition</li>
+                            <li>Designed excavation and water retention systems</li>
+                            <li>Collaborated with heavy construction experts</li>
+                        </ul>
+
+                        <div class="resume-row">
+                            <h3 class="resume-subtitle">Structural Analysis: Gutterson Parking Garage</h3>
+                        </div>
+
+                        <ul class="resume-list">
+                            <li>Performed comprehensive load analysis of the structure</li>
+                            <li>Included regional consideration for loads in Burlington, VT</li>
+                        </ul>
+
+                        <div class="resume-row">
+                            <h3 class="resume-subtitle">FEA: Mechanics of the Golf Swing</h3>
+                        </div>
+
+                        <ul class="resume-list">
+                            <li>Conducted finite element analysis in AbaqusCAE</li>
+                            <li>Simulated club–ball collision at varying swing speeds</li>
+                            <li>Analyzed stress distribution on club face and ball</li>
+                        </ul>
+
+                        <div class="resume-row">
+                            <h3 class="resume-subtitle">Work Hard Play Hard Rollercoaster</h3>
+                        </div>
+
+                        <ul class="resume-list">
+                            <li>Designed human-powered rollercoaster using mechanical advantage</li>
+                            <li>Modeled and evaluated components in CAD</li>
+                            <li>Collaborated with team to ensure feasibility and safety</li>
+                        </ul>
+                    </section>
+
+                    <section class="resume-section">
+                        <h2 class="resume-title">Work Experience</h2>
+
+                        <div class="resume-row">
+                            <h3 class="resume-subtitle">McGillicuddy's Alehouse</h3>
+                            <h4 class="resume-location">Williston, Vermont</h4>
+                        </div>
+
+                        <p class="resume-detail">Line Cook (May 2023 – Dec 2023)</p>
+
+                        <ul class="resume-list">
+                            <li>Worked in fast paced, team-oriented kitchen environment</li>
+                            <li>Took initiative to complete extra tasks and assist coworkers</li>
+                            <li>Maintained high standards of cleanliness and task management</li>
+                        </ul>
+
+                        <div class="resume-row">
+                            <h3 class="resume-subtitle">Cherokee Golf Course</h3>
+                            <h4 class="resume-location">Louisville, Kentucky</h4>
+                        </div>
+
+                        <p class="resume-detail">Clubhouse Operator (Jul 2023 – Aug 2023)</p>
+
+                        <ul class="resume-list">
+                            <li>Independently operated clubhouse in manager’s absence</li>
+                            <li>Developed multitasking and time management skills</li>
+                            <li>Responsible for end-of-day financial calculations</li>
+                        </ul>
+                    </section>
+
                 </div>
-                <div class="side">
-                    <div id="address"><b>
-                        <p>50 Lafountain St.</p> <p>Burltington, VT, 05401</p>
-                        <p>(502)-938-6940</p> <p>sstitesallen@gmail.com</p></b>
+
+                <!-- RIGHT COLUMN -->
+                <aside class="resume-column">
+
+                    <div class="resume-address">
+                        610 Galer St.<br>
+                        Seattle, WA 98109<br>
+                        (502) 938-6940<br>
+                        sstitesallen@gmail.com
                     </div>
-                    <h2 id="reshead">Skills</h2>
-                    <h4 id="ressub">Techincal Skills</h4>
-                    <ul id="resumelist">
-                        <li>SolidWorks</li>
-                        <li>Microsoft Excel</li>
-                        <li>HTML</li>
-                        <li>Python</li>
-                        <li>R Studio/R Markdown</li>
-                        <li>AutoCad</li>
-                        <li>Arduino</li>
+
+                    
+
+                    <h4 class="resume-subheading">Technical Skills</h4>
+                    <ul class="resume-list">
+                        <li>AbaqusCAE</li><li>AutoCAD</li><li>SolidWorks</li><li>Arduino</li>
+                        <li>HTML/CSS</li><li>JavaScript</li><li>Python</li>
+                        <li>R Studio</li><li>Microsoft Office</li>
                     </ul>
-                    <h4 id="ressub">Interpersonal Skills</h4>
-                    <ul id="resumelist">
-                        <li>Coachability</li>
-                        <li>Collaboration</li>
-                        <li>Emotional Intelligence</li>
-                        <li>Critical Problem Solving</li>
-                        <li>Punctual</li>
+
+                    <h4 class="resume-subheading">Relevant Courses</h4>
+                    <ul class="resume-list">
+                        <li>Computational Solids</li><li>Design of Elements</li><li>Dynamics</li>
+                        <li>Hydraulics</li><li>Materials and Structures</li><li>Structural Analysis</li>
+                        <li>Structural Steel Design</li><li>System Dynamics</li><li>Thermodynamics</li>
                     </ul>
-                    <h4 id="ressub">Activities</h4>
-                    <ul id="resumelist">
-                        <li>Design & Illustration</li>
-                        <li>Intramural Sports</li>
-                        <li>Golf</li>
-                        <li>Fantasy Sports</li>
+
+                    <h4 class="resume-subheading">Professional Skills</h4>
+                    <ul class="resume-list">
+                        <li>Critical Problem Solving</li><li>Coachability</li><li>Adaptability</li>
+                        <li>Communication</li><li>Collaboration</li><li>Emotional Intelligence</li>
                     </ul>
-                </div>
+
+                    <h4 class="resume-subheading">Activities</h4>
+                    <ul class="resume-list">
+                        <li>Data Analytics</li><li>Design & Illustration</li>
+                        <li>Golf</li><li>Fantasy Sports</li><li>Intramural Sports</li>
+                    </ul>
+
+                </aside>
+
             </div>
+
         </article>
-        
+
         <footer id="resfoot">
-            For a Copy of my Resume See: <a href="Resume_Stites_Allen.pdf">Resume</a>
+            For a copy of my resume see: 
+            <a href="Resume_Stites_Allen.pdf">Resume</a>
         </footer>
-        <script src="script.js"></script>
+
     </body>
 </html>

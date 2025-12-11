@@ -1,303 +1,186 @@
-/* Flexbox Layouts */
-.flexbox-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-@media (max-width: 600px) {
-    .flexbox-container {
-        flex-direction: column;
-        align-items: stretch;
-    }
-}
-
 /* Global Styles */
 html, body {
     margin: 0;
     padding: 0;
-    padding-left: 25px;
-    padding-right: 25px;
-    background-color: #f5f5f5;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
+    font-family: Arial, sans-serif;
+
+    /* Base gray background */
+    background-color: #d9d9d9;
+
+    /* Subtle noise texture */
+    background-image: 
+        radial-gradient(rgba(0,0,0,0.08) 1px, transparent 1px),
+        radial-gradient(rgba(0,0,0,0.06) 1px, transparent 1px);
+    background-size: 3px 3px, 5px 5px;
+    background-position: 0 0, 10px 10px;
+
+    color: #000;
+    line-height: 1.6;
 }
 
 /* Header */
 header {
-    background-color: #3D52A0;
+    background-color: #1a1a1a;
     width: 100%;
     box-sizing: border-box;
-    padding: 20px 0;
-    border-radius: 12px;
-    margin-top: 20px;
-}
-
-#mainhead {
+    padding: 15px 0;
+    margin-top: 0;
+    border-radius: 0;
     text-align: center;
-    color: white;
-    font-size: 50px;
-    margin: 0;
-    padding: 20px 0;
 }
 
-/* Box Sections */
+/* Main Title */
+#mainhead {
+    font-size: 48px;
+    margin: 0 0 10px 0;
+    color: #e6e6e6;
+}
+
+/* Navigation Flexbox */
+.flexbox-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Navigation Boxes */
+.box-common {
+    width: 160px;
+    padding: 15px;
+    text-align: center;
+    background-color: #333;
+    color: #e6e6e6;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.box-common:hover {
+    background-color: #555;
+    transform: translateY(-3px);
+}
+
 .box-link {
     text-decoration: none;
-    color: inherit;
-    display: block;
-    flex: 1 1 20%;
-    min-width: 220px;
-    max-width: 100%;
-    box-sizing:border-box;
 }
 
-.box-common {
-    width: 100%;
-    height: 100%;
+/* Section Titles */
+#secHead, #graphHead, .projhead, #reshead {
     text-align: center;
-    background-color: #3D52A0;
-    color: white;
-    padding: 20px;
-    border: 3px solid #8697C4;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    box-sizing: border-box;
-}
-
-
-.box-link:hover .box-common {
-    background-color: #8697C4;
-    border-color: #3D52A0;
-}
-
-/* 5 items in a row */
-@media (min-width: 1200px) {
-    .box-link {
-        flex: 1 1 18%; 
-    }
-}
-
-/* 3 boxes per row on medium screens */
-@media (max-width: 1199px) and (min-width: 800px) {
-    .box-link {
-        flex: 1 1 30%;
-    }
-}
-
-/* 2 boxes per row on smaller screens */
-@media (max-width: 799px) and (min-width: 500px) {
-    .box-link {
-        flex: 1 1 45%; /* 2 items in a row */
-    }
-}
-
-
-/* Links and Headings */
-#ahead {
-    text-align: center;
-    font-size: 25px;
-    color: white;
-    text-decoration: none;
-}
-
-/* Images */
-img {
-    width: 45%;
-    max-width: 100%;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-}
-
-#img-foot, #img-basket, #img-base, #img-golf, #img-soccer {
-    border: 5px solid black;
-}
-#img-raven{
-    border: 5px solid rgb(60, 6, 87)
-}
-
-#img-raven:hover {
-    transform: scale(1.25);
-}
-#img-foot:hover {
-    transform: scale(1.25);
-}
-#img-basket:hover {
-    transform: scale(1.25);
-}
-#img-base:hover {
-    transform: scale(1.25);
-}
-#img-golf:hover {
-    transform: scale(1.25);
-}
-#img-soccer:hover {
-    transform: scale(1.25);
-}
-
-
-/* Resume Section */
-#resumelist {
-    font-size: 18px;
-    margin-left: 80px;
-}
-
-#reshead {
-    font-size: 40px;
-    margin: 0 0 10px 30px;
+    margin-top: 40px;
+    font-size: 36px;
     text-decoration: underline;
 }
 
-#ressub, #resloc {
-    font-size: 20px;
-    margin-left: 70px;
-    margin-bottom: 5px;
-}
-
-#resloc {
-    color: #5E5E5E;
-    font-size: 15px;
-}
-
-/* Resume Layout */
-.side, .main {
-    background-color: white;
-    padding: 20px;
-    flex: 1;
-    max-width: 600px;
-}
-
-/* Resume Footer */
-#resfoot {
-    margin: 20px 0;
-    font-size: 18px;
+/* About Section Layout */
+.about-container {
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1100px;
+    padding: 20px;
 }
 
-/* Address Block */
-#address {
-    display: flex;
-    align-items: center;
-    margin-left: 100px;
-    margin-bottom:20px;
+.about-container.reverse {
+    flex-direction: row-reverse;
 }
 
-/* Responsive Resume */
-.flexbox-resume {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
+/* About Images */
+.about-container img.aboutImg, .img-proj, .vid-proj {
+    border: 3px solid #444;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
 }
 
-@media (max-width: 1000px) {
-    .flexbox-resume {
-        flex-direction: column;
-        align-items: center;
-    }
+.aboutImg {
+    width: 300px;
+    height: auto;
+}
+
+.img-proj, .vid-proj {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* About Text */
+.aboutText {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Section Boxes */
+.sectionBox {
+    background-color: #e6e6e6;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* Image Centering */
 .imgcen {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-@media (max-width: 600px) {
-    .imgcen {
-        flex-direction: column;
-    }
+/* Resume Layout */
+.flexbox-resume {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* Paragraph & Heading Styles */
-#homepar, .graphicpar, .projpar {
-    margin: 15px 75px;
-    font-size: 18px;
-    line-height: 1.6;
-}
-#secHead{
-    text-align: center;
-    font-size: 40px;
-    margin: 0;
-    margin-top:20px;
-    text-decoration: underline;
-}
-#graphHead{
-    text-align: center;
-    font-size: 30px;
-    margin: 0;
-    margin-top:20px;
-    text-decoration: underline;
+.main, .side {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    max-width: 600px;
 }
 
-#homehead, .graphichead, .projhead {
-    margin-left: 50px;
-    font-size: 32px;
-    text-decoration: underline;
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style-type: none;
-    padding-left: 90px;
-}
-
-ul li::before {
-    content: "– ";
-    color: #3D52A0;
-}
-
-/* Fix resume spacing */
 .flexbox-container.nowrap {
     flex-wrap: nowrap;
     gap: 10px;
     align-items: baseline;
 }
 
-.flexbox-container.nowrap h3{
+.flexbox-container.nowrap h3, .flexbox-container.nowrap h4 {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.flexbox-container.nowrap h4 {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: #888;
+
+/* Resume Lists */
+ul {
+    list-style-type: none;
+    padding-left: 20px;
 }
 
-/* Project Content */
-#projlink {
-    font-size: 16px;
-    text-align: center;
-    margin: 20px 0;
+ul li::before {
+    content: "– ";
+    color: #333;
 }
 
-.img-proj, .vid-proj {
-    border: 5px solid #3D52A0;
-    width: 80%;
-    max-width: 600px;
-    margin: 20px auto;
-    display: block;
-    border-radius: 10px;
-}
-
-/* Form Styles */
+/* Contact Form */
 form {
     width: 400px;
     margin: 50px auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 12px;
-    background-color: #f9f9f9;
+    background-color: #f0f0f0;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
@@ -306,16 +189,15 @@ form label {
     margin-top: 15px;
     margin-bottom: 5px;
     font-weight: bold;
-    text-align: left;
 }
 
-form input,
-form textarea {
+form input, form textarea {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
     border-radius: 6px;
     border: 1px solid #ccc;
+    font-size: 14px;
 }
 
 form button {
@@ -323,182 +205,450 @@ form button {
     padding: 10px 20px;
     border: none;
     border-radius: 6px;
-    background-color: #007acc;
-    color: white;
+    background-color: #333;
+    color: #e6e6e6;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: 0.3s;
 }
 
 form button:hover {
-    background-color: #005fa3;
+    background-color: #555;
 }
 
-/* Homepage Style */
-.about-container {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    box-sizing: border-box;
-    margin-bottom:40px;
-    margin-top: 10px;
-}
-
-.about-container.reverse {
-    flex-direction: row-reverse;
-}
-
-.aboutImg {
-    flex: 0 0 auto;
-    width: 100%;
-    max-width: 300px;
-    margin-inline-start: 75px;
-}
-
-.about-container.reverse .aboutImg{
-    margin-inline-start: 0px;
-    margin-inline-end: 75px;
-}
-
-.aboutImg img {
-    width: auto;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.aboutText {
-    flex: 1;
-}
-
-#textBox {
-    background-color: white;
+/* Footer */
+#site-footer, #resfoot {
+    text-align: center;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    line-height: 1.6;
+    background-color: #1a1a1a;
+    color: #e6e6e6;
+    border-radius: 0;
+    margin-top: 40px;
+    font-size: 16px;
 }
 
+/* Responsive Media Queries */
 @media screen and (max-width: 800px) {
     .about-container {
-      flex-direction: column;
-      align-items: center;  
-      text-align: center; 
-        }
-  
-    .aboutImg {
-      margin-bottom: 20px;
-      width:300px;
-      height: auto; 
+        flex-direction: column;
+        text-align: center;
     }
 
-    .text-box {
-      width: 100%;          
-      max-width: 90%; 
+    .aboutImg {
+        margin-bottom: 20px;
+        width: 80%;
+        height: auto;
     }
-    
+
     .about-container.reverse {
         flex-direction: column;
     }
+
+    .main, .side {
+        max-width: 90%;
+    }
+
+    form {
+        width: 90%;
+    }
 }
 
-/* The Modal (background) */
+@media screen and (max-width: 600px) {
+    .flexbox-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Container for graphic images */
+.imgcen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start; /* Prevent images from stretching to same height */
+}
+
+/* Individual images in the container */
+.imgcen img {
+    flex: 0 1 auto;        /* Do not force height or width, allow natural size */
+    max-width: 48%;        /* Two images per row roughly */
+    height: auto;          /* Maintain aspect ratio */
+    display: block;
+    border: 3px solid #444;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.imgcen img:hover {
+    transform: scale(1.05);
+}
+
+/* Small screens stack images */
+@media screen and (max-width: 600px) {
+    .imgcen img {
+        max-width: 90%;     /* Full width on mobile */
+    }
+}
+/* Reduce gap after headers */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 20px;   /* Space above heading */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+/* Reduce gap before paragraphs */
+p {
+    margin-top: 0;      /* No extra space above paragraph */
+    margin-bottom: 15px; /* Space below paragraph */
+    line-height: 1.6;
+}
+/* Modal background */
 .modal {
-    display: none; 
+    display: none;           /* Hidden by default */
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(196, 196, 196, 0.9); 
+    background-color: rgba(0,0,0,0.8); /* Dark overlay */
     overflow: auto;
-    padding-top: 60px;
+    justify-content: center;
+    align-items: center;
 }
 
-
+/* Modal content (image) */
 .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
+    max-width: 90%;
     max-height: 90%;
-    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    display: block;
+    margin: auto;
 }
 
-/* Close Button */
+/* Close button */
 .close {
     position: absolute;
-    top: 15px;
+    top: 20px;
     right: 35px;
-    color: #f1f1f1;
+    color: #fff;
     font-size: 40px;
     font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-/* Responsive image */
-@media screen and (max-width: 700px) {
-    .modal-content {
-        width: 100%;
+.close:hover {
+    color: #bbb;
+}
+
+/* Section Headers Inside Boxes */
+.projhead,
+.graphichead {
+    margin-top: 0px;   /* reduce from default ~20px or more */
+    margin-bottom: 15px; /* spacing below header */
+    font-size: 28px;    /* keeps them slightly smaller than main headings */
+}
+
+/* Reduce top and bottom padding only for index page section boxes */
+#index-page .sectionBox {
+    padding-top: 0px;   /* smaller top padding */
+    padding-bottom: 0px; /* smaller bottom padding */
+}
+/* Reduce top and bottom margins for About Me section on index page */
+#index-page .about-container {
+    margin-top: 20px;   /* was 40px */
+    margin-bottom: 10px; /* was 40px */
+    padding: 15px 0;    /* optional, can tweak if needed */
+}
+
+/* Reduce padding inside the text box */
+#index-page #textBox {
+    padding: 5px; /* was 20px */
+}
+/* Reduce top margin for the main Graphic Design section header */
+#graphHead {
+    margin-top: 1px; /* adjust as needed */
+}
+
+/* Contact Form Labels & Fields - Tighter spacing */
+form label {
+    display: block;
+    margin: 0px;          /* remove default margin */
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+form input,
+form textarea {
+    display: block;
+    width: 100%;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin: 2px 0 10px 0; /* small margin above & below for spacing */
+    font-size: 14px;
+    line-height: 1.4;
+    resize: vertical;   /* for textarea only, optional */
+}
+
+/* Index Page About Me Title */
+#index-about h2 {
+    margin-top: 20px;   /* Reduce the space above */
+    margin-bottom: 5px; /* Optional: adjust space below */
+}
+body.homepage h2 {
+    margin-top: 20px;    /* Reduce space above */
+    margin-bottom: 5px; /* Space below */
+}
+
+/* ============================
+   RESUME PAGE (SCOPED)
+   ============================ */
+
+#resume-page .resume-wrapper {
+    max-width: 1100px;
+    margin-top: 40px;
+}
+
+#resume-page .resume-columns {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Left column (65%) / Right sidebar (35%) */
+#resume-page .resume-main {
+    flex: 0 0 65%;
+    background: #f7f7f7;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#resume-page .resume-side {
+    flex: 0 0 30%;
+    background: #f7f7f7;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Section spacing */
+#resume-page .resume-section {
+    margin-bottom: 15px;
+}
+
+/* Typography */
+#resume-page .resume-title {
+    font-size: 28px;
+    margin: 20px 0 10px 0;
+    text-decoration: underline;
+}
+
+#resume-page .resume-subtitle {
+    font-size: 20px;
+    margin: 0;
+}
+
+#resume-page .resume-location,
+#resume-page .resume-detail {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    color: #444;
+}
+
+/* Rows where title + location appear side-by-side */
+#resume-page .resume-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Sidebar headings */
+#resume-page .resume-subheading {
+    font-size: 18px;
+    margin: 15px 0 5px 0;
+}
+
+/* Lists */
+#resume-page .resume-list {
+    margin: 5px 0 15px 0;
+    padding-left: 18px;
+}
+
+#resume-page .resume-list li {
+    margin-bottom: 6px;
+}
+
+#resume-page .resume-list li::before {
+    content: "• ";
+    color: #222;
+}
+
+/* Address box */
+#resume-page .resume-address {
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    #resume-page .resume-main,
+    #resume-page .resume-side {
+        flex: 0 0 100%;
     }
 }
-
-.sectionBox {
-    background-color: white;
-    border-radius: 16px;
-    padding: 30px;
-    margin: 30px auto;
-    max-width: 1000px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    border: 2px solid #ccc;
+.resume-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
 }
 
-.comment {
-    border: 2px solid #ddd;    
-    padding: 15px;              
-    margin: 10px 0;             
-    background-color: #f9f9f9; 
-    border-radius: 8px;        
-    position: relative;        
+.resume-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.comment-name {
+@media (max-width: 768px) {
+  .resume-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* ============================
+   RESUME PAGE (CLEAN GRID)
+   ============================ */
+#resume-page .resume-wrapper {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 15px;
+}
+
+/* Disable older conflicting layouts */
+.flexbox-resume,
+#resume-page .resume-columns {
+    display: unset !important;
+    flex-wrap: unset !important;
+    gap: unset !important;
+}
+
+/* Two-column grid layout */
+#resume-page .resume-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Left 2/3, Right 1/3 */
+    gap: 2rem;
+}
+
+/* Column content styling */
+#resume-page .resume-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Left column content */
+#resume-page .resume-main {
+    background: #f7f7f7;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Right sidebar */
+#resume-page .resume-side {
+    background: #f7f7f7;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Sections inside columns */
+#resume-page .resume-section {
+    margin-bottom: 0px;
+}
+
+/* Section headings */
+#resume-page .resume-title {
+    font-size: 28px;
+    margin: 20px 0 10px 0;
+    text-decoration: underline;
+}
+
+/* Subheadings (e.g., jobs, project titles) */
+#resume-page .resume-subtitle {
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Locations and detail text */
+#resume-page .resume-location,
+#resume-page .resume-detail {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    color: #444;
+}
+
+/* Row layout for title + location side-by-side */
+#resume-page .resume-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+/* Sidebar headings */
+#resume-page .resume-subheading {
+    font-size: 18px;
+    margin: 0px 0 1px 0;
+    text-decoration: underline;
+}
+
+/* Lists */
+#resume-page .resume-list {
+    margin: 1px 0 1px 0;
+    padding-left: 18px;
+}
+
+#resume-page .resume-list li {
+    margin-bottom: 2px;
+    line-height: 1.5;
+}
+
+#resume-page .resume-list li::before {
+    content: "• ";
+    color: #222;
+}
+
+/* Address box */
+#resume-page .resume-address {
     font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.5;
 }
 
-.delete-btn {
-    position: absolute;
-    top: 32.5px;
-    bottom: auto;
-    right: 10px;
-    color: red;
-    border: none;
-    cursor: pointer;
+/* Paragraphs */
+#resume-page p {
+    margin-top: 0;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-size: 17px;
 }
 
-.delete-btn:hover {
-    color: white;
-    background-color: darkred;
+/* Responsive adjustments */
+@media screen and (max-width: 900px) {
+    #resume-page .resume-container {
+        grid-template-columns: 1fr;
+    }
 }
-
-input, textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 14px;
-}
-
-.contactInfo {
-    margin-left: 50px;
+#resume-page .resume-name {
+    font-size: 45px;
+    margin-bottom: 0px;
+    font-weight: bold;
 }
