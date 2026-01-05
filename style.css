@@ -652,3 +652,17 @@ body.homepage h2 {
     margin-bottom: 0px;
     font-weight: bold;
 }
+/* Row layout ONLY for specific multi-image projects */
+.project-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* allows clean wrapping on smaller screens */
+}
+
+/* Override img-proj behavior only inside project-row */
+.project-row .img-proj {
+    margin: 0;
+    width: 30%;       /* 3 images fit nicely */
+    max-width: 300px; /* prevents oversized images */
+}
